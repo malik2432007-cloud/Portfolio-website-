@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Portfolio of Abdul Malik, BCA student and aspiring web developer" />
+    <title>Abdul Malik — Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-bar" id="scrollBar"></div>
+
+    <header class="topbar-wrap">
+      <div class="topbar" id="topbar">
+        <a href="#home" class="brand">
+          <span class="brand-mark">AM</span>
+          <span>Abdul Malik</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#focus">Focus</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#journey">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode"></button>
+          <button
+            class="icon-btn menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="4" y1="7" x2="20" y2="7" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="17" x2="20" y2="17" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero-grid">
+        <div>
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>BCA 3rd Year · MUIT · Web Developer Intern</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="accent-word">Abdul Malik</span>.
+          </h1>
+
+          <div class="role-line">
+            <span>Currently:</span>
+            <span class="role-pill" id="roleRotator">BCA 3rd Year Student</span>
+          </div>
+
+          <p class="hero-lead">
+            A computer applications student at Maharishi University of Information Technology
+            focused on building fast, structured web interfaces, Python utilities, and clean
+            database-backed projects.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">Explore Work →</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="social-row">
+            <a class="social-link" href="https://github.com/your-username" target="_blank" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social-link" href="mailto:abdul.malik@example.com">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-bento">
+          <div class="terminal-card">
+            <div class="terminal-top">
+              <div class="term-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="term-tabs" role="tablist" aria-label="Developer info tabs">
+                <button class="term-tab active" type="button" data-tab="profile">profile</button>
+                <button class="term-tab" type="button" data-tab="stack">stack</button>
+                <button class="term-tab" type="button" data-tab="status">status</button>
+              </div>
+            </div>
+            <div class="terminal-body" id="terminalBody"></div>
+          </div>
+
+          <div class="mini-bento-row">
+            <div class="mini-tile">
+              <div class="mini-tile-label">Institution</div>
+              <div class="mini-tile-value">MUIT · BCA</div>
+            </div>
+            <div class="mini-tile">
+              <div class="mini-tile-label">Internship</div>
+              <div class="mini-tile-value">Codec Technologies</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">01 / Profile</span>
+            <h2>About Abdul Malik</h2>
+          </div>
+        </div>
+
+        <div class="about-layout">
+          <div class="panel about-story">
+            <div>
+              <p style="margin-bottom: 14px;">
+                I'm <strong>Abdul Malik</strong>, a third-year Bachelor of Computer Applications
+                (BCA) student at <strong>Maharishi University of Information Technology</strong>.
+                I enjoy breaking down real-world problems into readable code and clean user
+                interfaces.
+              </p>
+              <p>
+                Whether I'm crafting responsive web layouts, writing Python scripts to automate
+                everyday tasks, or building complete apps such as a Lost &amp; Found portal, I focus on writing
+                maintainable code and learning something practical from every build.
+              </p>
+            </div>
+
+            <div class="about-tags">
+              <span>Responsive UI</span>
+              <span>Problem Solving</span>
+              <span>Clean Code</span>
+              <span>Web Development</span>
+              <span>Team Collaboration</span>
+            </div>
+          </div>
+
+          <div class="stats-bento">
+            <div class="stat-box">
+              <div class="stat-num" data-count="3" data-suffix="+">3+</div>
+              <div class="stat-label">Featured Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="7" data-suffix="+">7+</div>
+              <div class="stat-label">Core Technologies</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="3">3</div>
+              <div class="stat-label">Years in BCA</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-count="1" data-suffix="">1</div>
+              <div class="stat-label">Month Industry Internship</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOCUS AREAS -->
+      <section id="focus" class="reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">02 / Capabilities</span>
+            <h2>What I Build</h2>
+          </div>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card">
+            <div class="focus-top">
+              <div class="focus-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="focus-num">01</span>
+            </div>
+            <h3>Frontend Web Development</h3>
+            <p>Creating responsive, accessible websites with semantic HTML5, modern CSS layouts, and interactive JavaScript.</p>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-top">
+              <div class="focus-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 9-3 3 3 3"/><path d="m14 15 3-3-3-3"/></svg>
+              </div>
+              <span class="focus-num">02</span>
+            </div>
+            <h3>Python Scripting &amp; OOP</h3>
+            <p>Writing modular Python programs and automation scripts to solve algorithmic and everyday workflow challenges.</p>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-top">
+              <div class="focus-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
+              <span class="focus-num">03</span>
+            </div>
+            <h3>Relational Databases</h3>
+            <p>Structuring normalized schemas and writing clear SQL queries for reliable application data storage.</p>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-top">
+              <div class="focus-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" x2="6" y1="9" y2="21"/></svg>
+              </div>
+              <span class="focus-num">04</span>
+            </div>
+            <h3>Git &amp; Open Source</h3>
+            <p>Managing version control with Git, reviewing pull requests, and contributing to community repositories on GitHub.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">03 / Toolkit</span>
+            <h2>Technical Skills</h2>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Filter skills by category">
+            <button class="filter-btn active" type="button" data-skill-filter="all">All</button>
+            <button class="filter-btn" type="button" data-skill-filter="frontend">Frontend</button>
+            <button class="filter-btn" type="button" data-skill-filter="backend">Backend &amp; Data</button>
+            <button class="filter-btn" type="button" data-skill-filter="tools">Tools</button>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-head">
+              <span class="skill-name">HTML5 &amp; CSS3</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-level="90" style="width: 90%;"></div></div>
+            <div class="skill-cat">Semantic markup, Grid, Flexbox &amp; responsive layouts</div>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-head">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-level="75" style="width: 75%;"></div></div>
+            <div class="skill-cat">DOM manipulation, ES6+, events &amp; UI interactivity</div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-head">
+              <span class="skill-name">Python</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-level="70" style="width: 70%;"></div></div>
+            <div class="skill-cat">Core syntax, OOP concepts &amp; problem-solving scripts</div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-head">
+              <span class="skill-name">SQL</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-level="65" style="width: 65%;"></div></div>
+            <div class="skill-cat">Schema design, joins, filtering &amp; CRUD queries</div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-head">
+              <span class="skill-name">Git &amp; GitHub</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-level="80" style="width: 80%;"></div></div>
+            <div class="skill-cat">Branching, pull requests &amp; open-source workflows</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">04 / Work</span>
+            <h2>Selected Projects</h2>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" type="button" data-project-filter="all">All</button>
+            <button class="filter-btn" type="button" data-project-filter="web">Web</button>
+            <button class="filter-btn" type="button" data-project-filter="python">Python</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-category="web">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge">Web App</span>
+                <span class="project-index">01</span>
+              </div>
+              <h3>Online Bookstore</h3>
+              <p>An e-commerce storefront featuring book catalog browsing, shopping cart management, and streamlined order tracking.</p>
+            </div>
+            <div>
+              <div class="tech-list">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a class="project-link" href="https://github.com/your-username/online-bookstore" target="_blank" rel="noopener">
+                View Repository →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="python">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge">Python</span>
+                <span class="project-index">02</span>
+              </div>
+              <h3>Python Practice Lab</h3>
+              <p>A curated collection of modular scripts, object-oriented exercises, and logic utilities built to master Python fundamentals.</p>
+            </div>
+            <div>
+              <div class="tech-list">
+                <span>Python</span><span>OOP</span><span>CLI</span>
+              </div>
+              <a class="project-link" href="https://github.com/your-username/python-practice" target="_blank" rel="noopener">
+                View Repository →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge">Web App</span>
+                <span class="project-index">03</span>
+              </div>
+              <h3>Lost &amp; Found Application</h3>
+              <p>A web application for reporting and recovering lost belongings. Users register and log in, view a dashboard with live counts, submit lost and found reports, search and filter listings by type, category, status and date, and raise claims that the original reporter can approve or reject.</p>
+            </div>
+            <div>
+              <div class="tech-list">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a class="project-link" href="https://github.com/your-username/lost-and-found" target="_blank" rel="noopener">
+                View Repository →
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION / JOURNEY -->
+      <section id="journey" class="reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">05 / Background</span>
+            <h2>Education &amp; Experience</h2>
+          </div>
+        </div>
+
+        <div class="journey-grid">
+          <div class="journey-card">
+            <span class="journey-date">Currently in 3rd Year</span>
+            <h3>BCA — Bachelor of Computer Applications</h3>
+            <p>Maharishi University of Information Technology (MUIT). Studying software development, databases, and web technologies.</p>
+          </div>
+          <div class="journey-card warm-accent">
+            <span class="journey-date">05 Aug – 05 Sep 2026</span>
+            <h3>Web Developer Intern — Codec Technologies Pvt. Ltd.</h3>
+            <p>One-month AICTE &amp; ICAC approved industrial training and internship programme in web development.</p>
+            <a class="project-link" href="assets/internship-certificate.jpg" target="_blank" rel="noopener">View certificate →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">06 / Connect</span>
+            <h2>Get in Touch</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="panel contact-info">
+            <div>
+              <h3>Let's build something together.</h3>
+              <p>
+                Have a project idea, freelance work, or internship opportunity? Reach out
+                directly or send a message using the form.
+              </p>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span>abdul.malik@example.com</span>
+                <button class="copy-btn" id="copyEmailBtn" type="button" data-copy="abdul.malik@example.com">Copy</button>
+              </div>
+              <div class="contact-item">
+                <span>github.com/your-username</span>
+                <a class="copy-btn" href="https://github.com/your-username" target="_blank" rel="noopener">Open</a>
+              </div>
+              <div class="contact-item">
+                <span>linkedin.com/in/your-username</span>
+                <a class="copy-btn" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">Open</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <!-- Replace YOUR_FORM_ID with your free Formspree ID -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="field">
+                <label for="senderName">Your Name</label>
+                <input id="senderName" type="text" name="name" placeholder="Enter your name" required />
+              </div>
+              <div class="field">
+                <label for="senderEmail">Email Address</label>
+                <input id="senderEmail" type="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="senderMessage">Message</label>
+                <textarea id="senderMessage" name="message" rows="4" placeholder="Tell me about your project or question..." required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Abdul Malik · Built with HTML, CSS &amp; JavaScript
+    </footer>
+
+    <button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
